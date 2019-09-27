@@ -1,6 +1,5 @@
 const resolve = require('path').resolve
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const url = require('url')
 const publicPath = ''
 
@@ -43,9 +42,6 @@ module.exports = (options = {}) => ({
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
     })
   ],
   resolve: {
