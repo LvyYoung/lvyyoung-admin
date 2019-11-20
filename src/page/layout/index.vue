@@ -59,8 +59,6 @@
   import Menu from '@/page/layout/menu'
   import Tags from '@/page/layout/tags';
 
-  import {ajax, request} from '@/utils/request.js'
-
   export default {
     name: 'layout',
     components: {
@@ -102,7 +100,6 @@
         return {width: `${width}px`, flex: `0 0 ${width}px`};
       },
       avatarIcon() {
-        debugger
         // icon-avatar-3
         return `iconfont icon-avatar-${Math.floor(Math.random() * 10)}`;
       }

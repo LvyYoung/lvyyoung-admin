@@ -39,15 +39,10 @@ export default {
               name: subMenus[j].menuName,
               title: subMenus[j].menuName,
               component(resolve) {
-                // webpack是静态分析资源，所以当路径中有变量时不能确切的知道打包哪个文件。
-                // 此时webpack会打包前缀路径下的所有文件，形成一个map，通过正则去匹配实际路径
                 require(['@/page' + url], resolve)
               }
             };
             menuGroup.children.push(subGroup);
-            // if (url) {
-            //   pageMaps['page'][subMenus[j].menuId] = subMenus[j];
-            // }
           }
           if (subMenus[j].children && subMenus[j].children.length > 0) {
             getSubRoute(subMenus[j].children);
