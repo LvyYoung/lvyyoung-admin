@@ -1,0 +1,84 @@
+
+.toolbar {
+    background-color: #e0e0e0;
+  }
+.toolbar .item {
+  width: 75px;
+  &-button {
+    background-color: transparent;
+  }
+}
+.floatL {
+  float: left;
+}
+.floatR {
+  float: right;
+}
+.center {
+  width: 100%;
+  &-left {
+    height: 100%;
+  }
+  &-left .el-textarea{
+    height: 100%;
+  }
+  &-left .el-textarea textarea{
+    height: 100%;
+    overflow: scroll;
+  }
+  &-mid {
+    width: 30px;
+    background-color: #e0e0e0;
+    height: 100%;
+    text-align: center;
+  }
+  &-right{
+    border: 1px #cccccc dashed;
+    overflow: scroll;
+    height: 100%;
+  }
+
+}
+  &-text {
+    font-size: 15px;
+    color: #333;
+    background: #fff;
+    font-family: Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "tohoma,sans-serif";
+    margin: 0;
+    border: 1px #cccccc dashed;
+    height: 700px;
+  }
+
+.el-notification__content {
+  overflow: auto;
+  height: 750px;
+}
+
+/*整体部分*/
+::-webkit-scrollbar
+{
+  width: 10px;
+  height: 10px;
+  /*滑动轨道*/
+  &-track
+  {
+    border-radius: 0px;
+    background: none;
+  }
+  /*滑块*/
+  &-thumb
+  {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+    background-color: rgba(255,255,255,.75)
+  }
+  /*滑块效果*/
+  &-thumb:hover
+  {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+    background-color: rgba(85, 85, 85, 0.4);
+  }
+}
+
+

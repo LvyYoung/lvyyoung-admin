@@ -44,6 +44,7 @@ module.exports = (options = {}) => ({
       names: ['vendor', 'manifest']
     })
   ],
+
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src')

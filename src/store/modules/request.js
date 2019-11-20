@@ -73,7 +73,6 @@ export default {
      * @param reqParam{data:{},success:function(){},exception: function() {}}
      * */
     login({commit}, reqParam) {
-      debugger
       return request({
         url: '/login', // 请求地址
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -121,7 +120,6 @@ export default {
         url: reqParam.url,
         data: reqParam.data
       }).then((res) => {
-        debugger
         commit('HIDE_LOADING');
         commit('AJAX', res);
         if (reqParam.url && reqParam.url !== '') {

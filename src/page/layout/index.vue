@@ -130,31 +130,7 @@
         this.$router.replace('/')
       },
       getMenuList() {
-        debugger
-        // this.$store.dispatch('getMenu');
-
-        request({
-          url: '/mock/menu',
-          type: 'post',
-          data: {
-            test: 'test'
-          },
-          success: (response) => {
-
-            console.log(response);
-            debugger
-            if (response.flag === 1) {
-              let record = response.data;
-              if (record) {
-                let menus = toTreeData(record, '0', 'pId', 'menuId');
-              }
-            }
-          },
-          error: (response) => {
-            debugger
-            console.log(response)
-          }
-        })
+        this.$store.dispatch('getMenu');
       },
       getBreadcrumb() {
         let matched = this.$route.matched;
