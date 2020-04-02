@@ -15,11 +15,13 @@ export default {
      * 用户登录
      * */
     login({commit}, reqParam) {
+      debugger
       return request({
         url: '/login', // 请求地址
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         data: reqParam.data // 提交数据
       }).then((res) => {
+        debugger
         commit('AJAX', res);
         reqParam.success(res)
       }).catch((res) => {

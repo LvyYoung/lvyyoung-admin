@@ -3,9 +3,7 @@ import Vuex from 'vuex'
 
 // import user from './user'
 // import app from './app'
-// import storage from './modules/storage'
 import menu from './modules/menu'
-// import tabs from './modules/tabs'
 import request from './modules/request'
 
 Vue.use(Vuex)
@@ -24,7 +22,6 @@ export default new Vuex.Store({
     red(state) {
       state.count -= 1;
     }
-    //
   },
   actions: {
     addFun(commit, n) {
@@ -39,8 +36,6 @@ export default new Vuex.Store({
     // user,
     // app,
     menu,
-    // storage,
-    // tabs,
     request
   }
 })

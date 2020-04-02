@@ -63,6 +63,7 @@
     },
     methods: {
       handleLogin() {
+      debugger
         this.$refs["form"].validate((valid) => {
           if (valid) {
             this.$store.dispatch('login', {
@@ -72,6 +73,7 @@
                 password: this.form.password
               },
               success: (response) => {
+              debugger
                 this.$router.replace('/layout')
                 // if (jsonData.global) {
                 //   if (jsonData.global.result_global.flag === '1') {
